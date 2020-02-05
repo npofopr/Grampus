@@ -1,11 +1,36 @@
+.section-gray {
+  background-color: gray;
+}
+
 body {
   color: #000;
 }
 
-a {
+.card,
+.card2 {
   color: #000;
 }
-
-a:hover {
+.card:hover,
+.card2:hover {
   color: red;
 }
+
+[href] {
+  color: green;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  position: relative;
+}
+.loader__text {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50px;
+  left: 50px;
+}
+/*# sourceMappingURL=style.css.map */

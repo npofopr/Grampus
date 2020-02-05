@@ -1,13 +1,40 @@
+@import 'section';
+
 $text-color: #000;
+
 
 body {
   color: $text-color;
 }
 
-a {
-  color: $text-color;
+.card,
+.card2 {
+    color: $text-color;
 
   &:hover {
     color: red;
   }
+}
+
+[href] {
+    color: green;
+}
+
+
+.loader {
+    $size: 200px;
+    width: $size;
+    height: $size;
+    background-color:  #000;
+
+    position: relative;
+
+    &__text {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(white,0.7);
+        top: $size - 150;
+        left: $size - 150;
+    }
 }
