@@ -1,8 +1,34 @@
-.section-gray {
-  background-color: gray;
-}
-
 body {
   color: #000;
+}
+
+.section-header {
+  min-height: 768px;
+  background: url(../img/header-bg.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.section-header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  background: rgba(238, 61, 27, 0.8);
+}
+.section-header .container {
+  position: relative;
+  z-index: 21;
 }
 /*# sourceMappingURL=style.css.map */
