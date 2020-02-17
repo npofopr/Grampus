@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col,
+.col-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  flex-basis: 0;
+  // базовый размер отдельно взятого flex-блока, обнуляем → дополнительное место вокруг контента не будет учтено.
+  // (content → width → flex-basis (ограниченный max|min-width)) — https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-width-%D0%B8-flex-basis-f34e658ce6a2
+  flex-grow: 1; // «жадность» отдельно взятого flex-блока
+  max-width: 100%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  // Это сокращение для flex-grow, flex-shrink и flex-basis — все вместе взятые. Второй и третий параметры опциональны, то есть flex-shrink и flex-basis. По-дефолту оно имеет значение 0 1 auto
+  // https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-flexbox-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-e26662cf87e0
+  width: auto;
+  max-width: 100%;
+}
+
+.col-8 {
+  flex: 0 0 (100%*8/12);
+  max-width: (100%*8/12);
+}
+
+.col-4 {
+  flex: 0 0 (100%/4);
+  max-width: (100%/4);
+}
