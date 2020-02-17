@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 1110px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -43,6 +42,6 @@
 }
 
 .col-4 {
-  flex: 0 0 (100%/4);
-  max-width: (100%/4);
+  flex: 0 0 (100%*4/12);
+  max-width: (100%*4/12);
 }
