@@ -13,7 +13,9 @@
 }
 
 .col,
-.col-auto {
+.col-auto,
+.col-4,
+.col-8 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -36,12 +38,14 @@
   max-width: 100%;
 }
 
-.col-8 {
-  flex: 0 0 (100%*8/12);
-  max-width: (100%*8/12);
-}
+@media (min-width: 768px) {
+  .col-8 {
+    flex: 0 0 (100%*8/12);
+    max-width: (100%*8/12);
+  }
 
-.col-4 {
-  flex: 0 0 (100%*4/12);
-  max-width: (100%*4/12);
+  .col-4 {
+    flex: 0 0 (100%*4/12);
+    max-width: (100%*4/12);
+  }
 }
