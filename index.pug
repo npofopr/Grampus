@@ -1,0 +1,22 @@
+extends layout/main
+
+block meta
+  title=pageTitle
+
+block content
+
+  .page__content
+    //- start Шапка сайта
+    include blocks/page-header/index
+
+    //- start Первый блок
+    include blocks/section-header/index
+
+    //- start блок с видео
+    include blocks/section-video/index
+
+    //- start блок Features
+    include blocks/section-features/index
+
+block footer
+  include blocks/page-footer/index

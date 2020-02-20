@@ -1,0 +1,65 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.page {
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100%;
+
+  &__inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__footer-wrapper {
+    flex-shrink: 0;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex; // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
+  flex-direction: column; // и прижимаем footer в IE 10-11
+  min-height: 100%;
+  word-break: break-word;
+  font-family: "Lato", sans-serif;
+}
+
+.section {
+  padding-top: 63px;
+  padding-bottom: 124px;
+}
+
+.section_colored {
+  background: #e2e2e2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: (43/36);
+  margin-bottom: 63px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}

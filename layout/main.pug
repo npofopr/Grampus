@@ -1,0 +1,49 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+block variables
+  - var pageTitle = "Главная страница"
+
+doctype html
+html.no-js.page(lang="en")
+  //- Служебная информация для страницы. На сайте не видна
+  head
+
+    block meta
+      //- Кодировка страницы
+      meta(charset="UTF-8")
+      //- Включаем возможность адаптации для мобильных устройств
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+      //- Мета теги для мобильных устройств
+      meta(name="format-detection" content="telephone=no")
+      meta(name="format-detection" content="date=no")
+      meta(name="format-detection" content="address=no")
+      meta(name="format-detection" content="email=no")
+      meta(content="notranslate" name="google")
+
+      //- Заголовок страницы
+      title Document
+
+      //- Для SEO
+      meta(name="keywords" content="")
+      meta(name="description" content="")
+
+    block head
+      //- Подключаем файл со стилями
+      link(href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet")
+      link(rel="stylesheet" href="css/style.css")
+
+  //- Начало видимой части страницы
+  body
+    noscript У вас отключен JavaScript.
+
+    //- page__inner - обертка контента сайта
+    .page__inner
+      block content
+        p содержимое страницы
+
+      .page__footer-wrapper
+        block footer
+          p подвал сайта
