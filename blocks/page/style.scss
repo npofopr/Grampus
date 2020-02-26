@@ -1,3 +1,7 @@
+:root {
+  --colored: #e2e2e2;
+}
+
 .clearfix::after {
   content: '';
   display: block;
@@ -39,12 +43,12 @@ body {
 }
 
 .section {
-  padding-top: 63px;
+  padding-top: calc(63px - 20px);
   padding-bottom: 124px;
 }
 
 .section_colored {
-  background: #e2e2e2;
+  background: var(--colored, #000);
 }
 
 .text-center {
@@ -53,7 +57,7 @@ body {
 
 .h2 {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: (43/36);
   margin-bottom: 63px;

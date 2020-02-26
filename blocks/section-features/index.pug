@@ -5,7 +5,10 @@ section.section.section-features.section_colored
       .col.col-4
         .card
           .card__img
-            img.img-responsive(loading="lazy" src="img/card.png" alt="Supports All Currencies and Cards")
+            <picture>
+              <source type="image/webp" srcset="img/card.webp">
+              <img class="img-responsive" src="img/card.png">
+            </picture>
           .card__inner.text-center
             h3.card__name
               | Supports All Currencies and Cards
@@ -17,7 +20,10 @@ section.section.section-features.section_colored
       .col.col-4
         .card
           .card__img
-            img.img-responsive(loading="lazy" src="img/header-bg.png" alt="Supports All Currencies and Cards")
+            <picture>
+              <source type="image/webp" srcset="img/card.webp">
+              <img class="img-responsive" src="img/card.jpg, img/card@2x.jpg 2x">
+            </picture>
           .card__inner.text-center
             h3.card__name
               | Supports All Currencies and Cards Supports All Currencies and Cards
@@ -29,7 +35,10 @@ section.section.section-features.section_colored
       .col.col-4
         .card
           .card__img
-            img.img-responsive(loading="lazy" src="img/card.png" alt="Supports All Currencies and Cards")
+            <picture>
+              <source type="image/webp" srcset="img/card.webp">
+              <img class="img-responsive" src="img/card.png">
+            </picture>
           .card__inner.text-center
             h3.card__name
               | Supports All Currencies and Cards

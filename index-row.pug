@@ -1,0 +1,34 @@
+extends layout/main
+
+block meta
+  title=pageTitle
+
+block content
+
+  .page__content
+    .container
+      .row
+        .col-4
+          div logo
+        .col-8
+          .row
+            .col-8
+              div menu
+            .col-4
+              div button
+
+    .container(style="margin-top:40px")
+      .row
+        .col-4
+          ul
+            li 1
+            li 2
+            li 3
+        .col-8
+          main
+            .row
+              .col-6 1
+              .col-6 2
+
+block footer
+  include blocks/page-footer/index

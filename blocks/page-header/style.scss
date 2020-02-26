@@ -1,3 +1,10 @@
+.page-header {
+  position: fixed;
+  z-index: 111;
+  top: 0;
+  width: 100%;
+}
+
 .section-header {
   min-height: 768px;
   background: url(../img/header-bg.png) no-repeat center;
