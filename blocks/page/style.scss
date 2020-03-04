@@ -85,7 +85,17 @@ body {
 .svg-icon--vk svg {
   fill: #4d76a1;
   color: #fff;
+}
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
