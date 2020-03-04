@@ -1,3 +1,8 @@
-mixin headerNav(link, name)
-  li
-    a(href=link).page-nav__link=name
+mixin headerNav(link, name, active)
+  if(active)
+    li
+      a(href=link).page-nav__link.active=name
+  else
+    li
+      a(href=link).page-nav__link=name
+

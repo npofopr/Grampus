@@ -1,0 +1,29 @@
+extends layout/main
+
+block meta
+  title=pageTitle
+
+block content
+
+
+  .page__content
+    .container
+      .col
+
+        .svg-icon.svg-icon--vk
+          <svg width="300" height="300">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+
+        .svg-icon
+          <svg width="300" height="300">
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+
+        .svg-img
+          img(src="img/biohazard.svg", width="200")
+
+        .svg-bg
+
+block footer
+  include blocks/page-footer/index

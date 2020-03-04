@@ -1,5 +1,6 @@
 :root {
   --colored: #e2e2e2;
+  --color-secondary: #EE3D1B;
 }
 
 .clearfix::after {
@@ -59,11 +60,88 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: (43/36);
+  line-height: 1.2;
+  margin-top: 0;
   margin-bottom: 63px;
 }
 
 .img-responsive {
   max-width: 100%;
   height: auto;
+}
+
+
+.svg-bg {
+  width: 200px;
+  height: 200px;
+  background: url(../img/biohazard.svg);
+  background-size: contain;
+}
+
+.svg-icon svg {
+  width: 400px;
+}
+
+.svg-icon--vk svg {
+  fill: #4d76a1;
+  color: #fff;
+
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+  padding: 11px 28px;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  &-border {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+  }
+
+  &-secondary {
+    color: var(--color-secondary, #EE3D1B);
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  &-primary {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  &-lg {
+    padding: 16px 38px;
+  }
+}
+
+
+.form-control {
+  border: 1px solid #333333;
+  border-radius: 6px;
+  width: 100%;
+  padding: 21px 31px;
+  margin-bottom: 24px;
+
+  &::placeholder {
+    color: rgba(19, 39, 67, 0.5);
+  }
+}
+
+select.form-control {
+  color: rgba(19, 39, 67, 0.5);
 }
