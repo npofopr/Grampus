@@ -554,7 +554,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.1944444444;
+  line-height: 1.2;
   margin-top: 0;
   margin-bottom: 63px;
 }
@@ -811,9 +811,5 @@ select.form-control {
 }
 .card__footer a:hover, .card__footer a:focus {
   text-decoration: underline;
-}
-
-.section-features .col:nth-child(n+4) {
-  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */
