@@ -10,30 +10,30 @@ html.no-js.page(lang="en")
   //- Служебная информация для страницы. На сайте не видна
   head
 
+    //- Кодировка страницы
+    meta(charset="UTF-8")
+    //- Включаем возможность адаптации для мобильных устройств
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    //- Мета теги для мобильных устройств
+    meta(name="format-detection" content="telephone=no")
+    meta(name="format-detection" content="date=no")
+    meta(name="format-detection" content="address=no")
+    meta(name="format-detection" content="email=no")
+    meta(content="notranslate" name="google")
+
+    //- Для SEO
+    meta(name="keywords" content="")
+    meta(name="description" content="")
+
     block meta
-      //- Кодировка страницы
-      meta(charset="UTF-8")
-      //- Включаем возможность адаптации для мобильных устройств
-      meta(name="viewport" content="width=device-width, initial-scale=1.0")
-
-      //- Мета теги для мобильных устройств
-      meta(name="format-detection" content="telephone=no")
-      meta(name="format-detection" content="date=no")
-      meta(name="format-detection" content="address=no")
-      meta(name="format-detection" content="email=no")
-      meta(content="notranslate" name="google")
-
       //- Заголовок страницы
       title Document
 
-      //- Для SEO
-      meta(name="keywords" content="")
-      meta(name="description" content="")
-
     block head
       //- Подключаем файл со стилями
-      link(href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet")
-      <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/css/swiper.css"/>
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,600,600i,700,700i&display=swap")
+      link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css")
       link(rel="stylesheet" href="css/style.css")
 
   //- Начало видимой части страницы
@@ -50,6 +50,6 @@ html.no-js.page(lang="en")
           p подвал сайта
 
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.js"></script>
-    script(src="js/index.js")
+    script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+    script(type="text/javascript" src="https://unpkg.com/swiper/js/swiper.js")
+    script(type="text/javascript" src="js/index.js")
