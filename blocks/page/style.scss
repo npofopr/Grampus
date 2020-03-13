@@ -155,3 +155,161 @@ body {
 select.form-control {
   color: rgba(19, 39, 67, 0.5);
 }
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,.6);
+
+  &-dialog {
+    width: 100%;
+    max-width: 640px;
+    margin: 50px auto;
+  }
+
+  &-content {
+    background-color: #fff;
+    padding: 40px;
+  }
+
+  &-show {
+    display: block;
+  }
+}
+
+
+.custom-label {
+  position: relative;
+  width: 96px;
+  height: 36px;
+  label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
+    background-color: #fff;
+    position: relative;
+    border-radius: 18px;
+    margin: 0;
+  }
+
+  input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .custom-label__marker {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: green;
+    border-radius: 50%;
+    transition: left 1s linear;
+  }
+
+  input:checked + .custom-label__marker {
+    left: 60px;
+    transition: left 1s linear;
+  }
+}
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+.offcanvas__overlay {
+  background-color: rgba(0,0,0,.6);
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.offcanvas__page-content {
+  display: block;
+}
+
+.modal-dialog {
+  animation: modal-content-show 1s 1 both;
+}
+
+.modal__backdrop {
+  animation: modal-backdrop-show 1s 1;
+}
+
+
+@keyframes modal-backdrop-show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  opacity: 0;
+  &.is-load {
+    opacity: 1;
+  }
+}
+
+.is-fixed {
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 0;
+    box-shadow: 0 0 10px #000;
+
+    * {
+      color: #000;
+    }
+
+    svg path {
+      fill: #000;
+    }
+  }
+}
