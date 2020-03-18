@@ -47,6 +47,14 @@ $(function () {
     event.preventDefault();
   });
 
+  $(".input-effect .label-effect").focusout(function () {
+    if ($(this).val() != "") {
+      $(this).addClass("not-empty");
+    } else {
+      $(this).removeClass("not-empty");
+    }
+  });
+
   // let linkAuth = document.querySelector('.link-auth');
   // let modal = document.querySelector('.modal');
 
@@ -94,3 +102,42 @@ $(document).ready(function () {
 //     $('select').styler();
 //   });
 //   })(jQuery);
+
+
+// Testing media queries with jQuery
+// Using matchMedia
+(function ($) {
+
+	/*
+	* We need to turn it into a function.
+	* To apply the changes both on document ready and when we resize the browser.
+	*/
+
+  function mediaSize() {
+    /*
+    * Set the matchMedia
+    * https://caniuse.com/#feat=matchmedia
+    */
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      /* Changes when we reach the min-width  */
+      // $('body').css('background', '#222');
+      // $('strong').css('color', 'tomato');
+
+    } else {
+      /* Reset for CSS changes – Still need a better way to do this! */
+      $('body, strong').removeAttr('style');
+    }
+  };
+
+  /* Call the function */
+  mediaSize();
+  /* Attach the function to the resize event listener */
+  window.addEventListener('resize', mediaSize, false);
+
+})(jQuery);
+
+
+$(document).ready(function(){
+  $('.phone').mask('0000-0000');
+  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+});

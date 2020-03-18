@@ -642,7 +642,6 @@ body {
   border-radius: 6px;
   width: 100%;
   padding: 21px 31px;
-  margin-bottom: 24px;
 }
 .form-control::-webkit-input-placeholder {
   color: rgba(19, 39, 67, 0.5);
@@ -844,6 +843,35 @@ body.is-load {
 }
 .is-fixed .page-header svg path {
   fill: #000;
+}
+
+.inp_wrap {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.help-text {
+  display: none;
+}
+
+.help-text.active {
+  display: block;
+  color: red;
+}
+
+.field-error input {
+  border-color: red;
+}
+
+.form-control + label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.form-control:focus + label,
+.form-control.not-empty + label {
+  top: -20px;
 }
 
 .page-header {

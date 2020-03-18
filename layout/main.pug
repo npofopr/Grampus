@@ -44,24 +44,6 @@ html.no-js.page(lang="en")
   body
     noscript У вас отключен JavaScript.
 
-    <!-- BROWSE HAPPY BEGINS HERE -->
-    <style>
-    .browse-happy {display:block;width:768px;height:120px;background-color:#cd3c18;color: #fff !important;margin: 0;font-size: 16px;line-height: 1.4;color: #333;position: fixed;z-index: 9999;top: 50%;left: 50%;margin-top: -60px;margin-left: -384px;padding: 20px 40px;text-align: justify}
-    .browse-happy a {color: #fff; text-decoration: underline;text-decoration-skip:ink}
-    </style>
-    <!--[if lt IE 10]>
-      <div class="browse-happy">
-        <div>
-          <p class="browse-happy__notice">Мы обнаружили, что вы используете <strong>устаревшую версию</strong> браузера Internet Explorer</p>
-          <p class="browse-happy__security">Из соображений безопасности этот сайт поддерживает Internet Explorer версии 10 и выше
-            <br>Кроме того, этот и многие другие сайты могут отображаться <strong>некорректно</strong></p>
-          <p class="browse-happy__update">Пожалуйста, обновите свой браузер по этой <a href="http://browsehappy.com/" target="_blank">ссылке</a></p>
-          <p class="browse-happy__recommend">(мы рекомендуем <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>)</p>
-        </div>
-      </div>
-    <![endif]-->
-    <!-- BROWSE HAPPY ENDS HERE -->
-
     .offcanvas
 
       aside.offcanvas__aside
@@ -116,12 +98,24 @@ html.no-js.page(lang="en")
                 .col-12
                   button.btn.btn-primary.btn-lg(type="submit") Submit Now
 
+    .modal#modal-contact
+      .modal-dialog
+        .modal-content
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Форма</h4>
+          </div>
+          .modal-body
+            p Форма отправлена
+
 
     script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
     script(type="text/javascript" src="https://unpkg.com/swiper/js/swiper.js")
     script(type="text/javascript" src="js/bootstrap-dialog.js")
     script(src="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js")
+    script(src="js/jquery.mask.js")
     script(type="text/javascript" src="js/index.js")
+    script(src="js/mail.js")
     script.
       new WOW().init();

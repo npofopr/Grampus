@@ -23,34 +23,73 @@ block content
               h2.h2 Contact
               p Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours
           .col-6
-            form.form.form-feedback.wow.slideInRight(action="email/mail.php")
+            form.form.form-feedback.wow.slideInRight
               //- Hidden Required Fields
               input(type="hidden" name="project_name" value="Grampus")
               input(type="hidden" name="form_subject" value="Обратная связь")
               .row
                 .col-6
-                  input.form-control(type="text" placeholder="First Name")
+                  .inp_wrap.input-effect
+                    input.label-effect.form-control.field-required(type="text" name="Имя" placeholder="First Name" value="")
+                    label ФИО
+                    div.help-text заполните
                 .col-6
-                  input.form-control(type="text" placeholder="Last Name")
-              .row
-                .col-12
-                  input.form-control(type="tel" placeholder="Phone Number")
-              .row
-                .col-12
-                  select.form-control(name="")
-                    option(value="") option 1
-                    option(value="") option 2
-                    option(value="") option 3
-              .row
-                .col-12
-                  button.btn.btn-primary.btn-lg(type="submit") Submit Now
+                  label.inp_wrap
 
-              .row(style="margin-top:35px")
+                    input.form-control(type="text" name="Фамилия" placeholder="Last Name" value="")
+                    div.help-text заполните
+              .row
                 .col-12
-                  .custom-label
+                  label.inp_wrap
+                    input.form-control.field-required.placeholder(type="tel" name="Телефонный номер" placeholder="Phone Number" value="")
+                    //- div.help-text Это поле должно содержать телефон в формате +7 123 456-78-90
+                    //-  pattern="(\+?\d[- .]*){7,13}"
+                    div.help-text заполните
+              .row
+                .col-12
+                  label.inp_wrap
+                    input.form-control.field-required(type="email" name="Email" placeholder="Email" value="")
+                    div.help-text заполните
+              .row
+                .col-12
+                  .inp_wrap
+                    select.form-control.field-required(name="Выбор опций")
+                      option(value="option 1") option 1
+                      option(value="option 2") option 2
+                      option(value="option 3") option 3
+                    div.help-text заполните
+              .row
+                .col-12
+                  div.listoptcolor.inp_wrap
+
+                    label
+                      input.field-radio-required(type="radio" name="optcolor" value="красный")
+                      |&nbsp;красный
+                    label
+                      input.field-radio-required(type="radio" name="optcolor" value="оранжевый")
+                      |&nbsp;оранжевый
+                    label
+                      input.field-radio-required(type="radio" name="optcolor" value="жёлтый")
+                      |&nbsp;жёлтый
+                    label
+                      input.field-radio-required(type="radio" name="optcolor" value="зелёный")
+                      |&nbsp;зелёный
+                    div.help-text Выберите нужный пункт
+              .row
+                .col-12
+                  //- .custom-label
+                  .inp_wrap
                     label(for="ident")
-                      input#ident(type="checkbox", name="")
-                      span.custom-label__marker
+                      input#ident.field-required(type="checkbox" name="Персональные данные")
+                        //- span.custom-label__marker
+                      //- div.help-text Выберите нужный пункт
+                      | соглашаюсь
+              .row
+                .col-12
+                  .inp_wrap
+                    button.btn.btn-primary.btn-lg(type="submit") Submit Now
+                    button.btn.btn-primary.btn-lg(type="reset") Reset
+
 
     section.section
       .container
